@@ -10,7 +10,7 @@ Bitcoin uses proof-of-work to maintain the ledger, and proof-of-work has been us
 
 Fire up WorkProver.main() with no args to show usage.  Then modify the run configuration.  As an example:
 
-'-s "test this text string" -n 4`
+`-s "test this text string" -n 4`
 
 ## Usage - jar
 
