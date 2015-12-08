@@ -16,8 +16,8 @@ import org.apache.commons.cli.ParseException;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * Class used for proof-of-work type computation using SHA256 hash to find a nonce
- * which solves for n leading zeroes (base64).
+ * Class used for proof-of-work type computation using SHA256 hash to find a
+ * nonce which solves for n leading zeroes (base64).
  * 
  * @author matthew.kindzerske
  *
