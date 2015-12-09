@@ -93,21 +93,10 @@ public class WorkProver {
 		NumberFormat formatter = new DecimalFormat();
 		formatter = new DecimalFormat("0.#####E0");
 
-		System.out.println(clearText + " + " + successNonce);
+		System.out.println("\"" + clearText + "\" + \"" + successNonce + "\"");
 		System.out.println(workProver.getSuccessfulHash());
 		System.out.println(" Time to solve: " + workProver.getTimeToSolveMS() + "ms ("
 				+ formatter.format(workProver.getSuccessfulNonceInt()) + " nonces)");
-	}
-
-	private byte[] toBytes(int i) {
-		byte[] result = new byte[4];
-
-		result[0] = (byte) (i >> 24);
-		result[1] = (byte) (i >> 16);
-		result[2] = (byte) (i >> 8);
-		result[3] = (byte) (i /* >> 0 */);
-
-		return result;
 	}
 
 	/**
@@ -117,7 +106,7 @@ public class WorkProver {
 	 * @throws NoSuchAlgorithmException
 	 */
 	public WorkProver() throws NoSuchAlgorithmException {
-		// Ready the MessageDiges
+		// Ready the MessageDigest
 		this.messageDigest = MessageDigest.getInstance("SHA-256");
 	}
 
@@ -184,6 +173,17 @@ public class WorkProver {
 																// if needed
 		byte[] digest = this.messageDigest.digest();
 		return String.format("%064x", new java.math.BigInteger(1, digest));
+	}
+	
+	private byte[] toBytes(int i) {
+		byte[] result = new byte[4];
+
+		result[0] = (byte) (i >> 24);
+		result[1] = (byte) (i >> 16);
+		result[2] = (byte) (i >> 8);
+		result[3] = (byte) (i /* >> 0 */);
+
+		return result;
 	}
 
 	private String getHexNonceFromInteger(int nonceInt) {
