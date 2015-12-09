@@ -5,7 +5,6 @@ Java class used for proof-of-work type computation using SHA256 hash to find a n
 ## Example Output
 
 `$ java -jar target/WorkProver-jar-with-dependencies.jar -s "test this text string" -n 4`
-
 `*** WorkProver: clearText + nonce = SHA256 hash with leading zeroes.  Found brute forced.`
 
 `Clear text and desired leading zeroes (repsectively):`
