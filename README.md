@@ -16,13 +16,15 @@ Java class used for proof-of-work type computation using SHA256 hash to find a n
 
 Bitcoin uses proof-of-work to maintain the ledger, and proof-of-work has been used to deter DoS for a while.  This is a small class to demonstrate how the brute-force works with nonces and SHA256.  
 
-## Usage - main()
+## Usage
+
+### Eclipse - main()
 
 Import the project in Eclipse and fire up WorkProver.main() with no args to show usage.  Then modify the run configuration.  As an example:
 
 `-s "testing string" -n 4`
 
-## Usage - jar
+### Executable .jar
 
 Run a maven install to generate an executable jar.  Execute with no args to see usage, or as an example:
 
